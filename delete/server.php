@@ -8,7 +8,7 @@
 
 
 
- $sql = "SELECT * FROM `stanze` WHERE `id`=' $idRoom'";
+ $sql = "SELECT * FROM `stanze` WHERE `id`='$idRoom';";
 
   $result = $conn->query($sql);
 
@@ -21,11 +21,12 @@
  $sql = "DELETE FROM `stanze` WHERE `id` = '$idRoom';";
 
  $result = $conn->query($sql);
- var_dump($result);
 
 
-  if($result ) {
-   echo 'OK';
+
+  if($result) {
+   // echo 'OK';
+   header("Location: $basePath?roomNumber=$idRoom");
   } else {
     echo 'KO';
   }

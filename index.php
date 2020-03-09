@@ -1,8 +1,14 @@
 <?php
  include 'server.php';
- include 'partials/header.php'
+ include 'partials/header.php';
  ?>
 
+ <?php
+  if(!empty($_GET['roomNumber'])){ ?>
+    <div class="alert alert-danger">
+      Hai cancellato la stanza id: <?php echo $_GET['roomNumber'] ?>
+    </div>
+  <?php } ?>
 
 
 
@@ -31,7 +37,7 @@
                      <td><?php echo $room['floor'] ?></td>
                      <td><a href="show/show.php?id=<?php echo $room['id'] ?>">View</a>
                      </td>
-                     <td><a href=""></a>Update </td>
+                     <td><a href="update/edit.php?id=<?php echo $room['id'] ?>">Update</a> </td>
                      <td>
                        <form action="delete/server.php" method="POST">
                          <input type="hidden" name="id" value="<?php echo $room['id'] ?>">
