@@ -1,39 +1,45 @@
 <?php
- include 'database.php';
+ include 'server.php';
  include 'partials/header.php'
  ?>
 
 
 
 
-   <body>
-     <table class="table">
-       <thead>
-         <tr>
-           <th>ID</th>
-           <th>FLOOR</th>
-           <th></th>
-           <th></th>
-           <th></th>
-         </tr>
-       </thead>
-       <tbody>
-         <?php
-           if (!empty($rooms)) {
-             foreach ($rooms as $room){ ?>
+     <div class="container">
+       <div class="row">
+         <div class="col-12">
+           <h1>Tutte le stanze</h1>
+           <table class="table">
+             <thead>
                <tr>
-                 <td><?php echo $room['id'] ?></td>
-                 <td><?php echo $room['floor'] ?></td>
-                 <td><a href="show/show.php?id=<?php echo $room['id'] ?>">View</a>
-                 </td>
-                 <td><a href=""></a>Update </td>
-                 <td>DELETE</td>
+                 <th>ID</th>
+                 <th>FLOOR</th>
+                 <th></th>
+                 <th></th>
+                 <th></th>
                </tr>
-             <?php }
-          }
-          ?>
-       </tbody>
-     </table>
+             </thead>
+             <tbody>
+               <?php
+               if (!empty($rooms)) {
+                 foreach ($rooms as $room){ ?>
+                   <tr>
+                     <td><?php echo $room['id'] ?></td>
+                     <td><?php echo $room['room_number'] ?></td>
+                     <td><?php echo $room['floor'] ?></td>
+                     <td><a href="show/show.php?id=<?php echo $room['id'] ?>">View</a>
+                     </td>
+                     <td><a href=""></a>Update </td>
+                     <td>DELETE</td>
+                   </tr>
+                 <?php }
+               }
+               ?>
+             </tbody>
+           </table>
+         </div>
+       </div>
+     </div>
 
-   </body>
- </html>
+<?php include 'partials/footer.php'; ?>
