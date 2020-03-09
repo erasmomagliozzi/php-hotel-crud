@@ -4,8 +4,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="<?php echo $basePath ?>dist/app.css">
-    <title></title>
+    <link rel="stylesheet" href="<?php echo $basePath?>dist/app.css">
+    <title>document</title>
   </head>
 
 <body>
@@ -17,4 +17,4 @@
       </ul>
     </nav>
   </header>
-  <div class="wrapper">
+  <div class="wrapper mt-5">

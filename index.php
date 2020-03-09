@@ -14,7 +14,8 @@
              <thead>
                <tr>
                  <th>ID</th>
-                 <th>FLOOR</th>
+                 <th>Room number</th>
+                 <th>Floor</th>
                  <th></th>
                  <th></th>
                  <th></th>
